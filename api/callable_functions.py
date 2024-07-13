@@ -44,12 +44,6 @@ def CancelOrder(order_id):
     expected_delivary = user_product.expected_delivary.iloc[0]
     
     if status not in ('delivered', 'cancelled'):
-        
-        sql_query = text(f'''UPDATE user_products
-        SET status = 'cancelled'
-        WHERE order_id = {order_id};''')
-        conn.execute(sql_query)
-        
         return f'As you have requested we have cancelled the product'
     
     if status == 'delivered':
@@ -80,38 +74,36 @@ def ReturnOrder(order_id):
     return 'Return order initiated, Our delivery partner will pick up the prduct within 2 days!'
 
 def GetRefundStatus(order_id):
-    return 'refund status'
+    return 'function for refund status is called'
 
 def ReplaceOrder(order_id):
-    return 'ReplaceOrder'
+    return 'function for ReplaceOrder is called'
 
 def HumanSupport(order_id):
-    return 'HumanSupport'
+    return 'function for HumanSupport is called'
 
 def ChangeDelivaryTime(order_id):
-    return 'ChangeDelivaryTime'
+    return 'function to ChangeDelivaryTime is called'
 
 def OrderTracking(order_id):
-    return 'OrderTracking'
+    return 'function for OrderTracking is called'
 
 def RefundStatus(order_id):
-    return 'RefundStatus'
+    return 'function to get RefundStatus is called'
 
 def ReplacementPolicy(order_id):
-    return 'ReplacementPolicy'
+    return 'function for ReplacementPolicy is called'
 
 def CancellationPolicy(order_id):
-    return 'CancellationPolicy'
+    return 'function for CancellationPolicy is called'
 
 def ReturnPolicy(order_id):
-    return 'ReturnPolicy'
+    return 'function for ReturnPolicy is called'
 
 def CashbackOrRewards(order_id):
-    return 'CashbackOrRewards'
+    return 'function for CashbackOrRewards is called'
 
 def DownloadInvoice(order_id):
-    return 'DownloadInvoice'
+    return 'function to DownloadInvoice is called'
 
-def HumanSupport(order_id):
-    return 'HumanSupport in not received'
 
